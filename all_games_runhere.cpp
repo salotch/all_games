@@ -65,8 +65,6 @@ int main() {
     }
     else if (n==4)
     {
-        int choice;
-        Player* players[2];
         players[0] = new Player (1,'x');
 
         cout << "Welcome to FCAI X-O Game. :)\n";
