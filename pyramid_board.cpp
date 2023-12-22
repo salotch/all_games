@@ -21,6 +21,8 @@ pyramid_Board::pyramid_Board() {
 // within board boundaries in empty cell
 // Return false otherwise
 bool pyramid_Board::update_board (int x, int y, char mark){
+    if (x==0&&y==0||x==0&&y==1||x==0&&y==3||x==0&&y==4||x==1&&y==4||x==1&&y==0)
+        return false;//to prevent player from select the option that found in if statement.
     // Only update if move is valid
     if ((x >= 0 && x <= 2 && y >=0 && y <= 4) && (board[x][y] == 0)) {
         board[x][y] = toupper(mark);
